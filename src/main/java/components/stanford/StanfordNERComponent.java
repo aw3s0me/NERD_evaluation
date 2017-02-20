@@ -26,12 +26,4 @@ public class StanfordNERComponent implements NERDComponent {
         pipeline.annotate(document);
         // TODO: analyze info. run calculation of metrics
     }
-
-    public Double calculatePrecision() {
-        return null;
-    }
-
-    public Double calculateRecall() {
-        return null;
-    }
 }

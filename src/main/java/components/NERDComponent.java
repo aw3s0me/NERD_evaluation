@@ -5,6 +5,4 @@ package components;
  */
 public interface NERDComponent {
     void process(String slide);
-    Double calculatePrecision();
-    Double calculateRecall();
 }
