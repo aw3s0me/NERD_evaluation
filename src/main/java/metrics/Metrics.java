@@ -9,7 +9,7 @@ class Metrics {
     private Double precision = 0.0;
     private Double recall = 0.0;
     private Double fMeasure = 0.0;
-    
+
     public void compute(List<String> expectedAnswers, List<String> systemAnswers) {
         //Compute the number of retrieved answers
         int correctRetrieved = 0;
