@@ -66,5 +66,12 @@
             <artifactId>java-sdk</artifactId>
             <version>3.5.3</version>
         </dependency>
+        <!-- PARSE HTML TO STRING -->
+        <dependency>
+            <!-- jsoup HTML parser library @ http://jsoup.org/ -->
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.10.2</version>
+        </dependency>
     </dependencies>
 </project>
