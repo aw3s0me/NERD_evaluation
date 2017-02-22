@@ -36,6 +36,7 @@ public class DBpediaNER implements NER {
 
     private List<String> sendUrl(String url) {
         List<String> retLst = new ArrayList<String>();
+
         try {
 
             URL urlObj = new URL(url);
@@ -45,8 +46,8 @@ public class DBpediaNER implements NER {
 
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            System.out.println(connection.getResponseCode());
             Document doc = dBuilder.parse(connection.getInputStream());
-
             doc.getDocumentElement().normalize();
 
             NodeList nList = doc.getElementsByTagName("surfaceForm");
@@ -58,11 +59,8 @@ public class DBpediaNER implements NER {
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) nNode;
                     String text = eElement.getAttribute("name");
-                    String offset = eElement.getAttribute("offset");
-
-                    String startEnd = Integer.parseInt(offset) + "," + (text.length() + Integer.parseInt(offset));
-                    System.out.println(startEnd);
-                    retLst.add(startEnd);
+                    System.out.println(text);
+                    retLst.add(text);
                 }
             }
         } catch (Exception e) {

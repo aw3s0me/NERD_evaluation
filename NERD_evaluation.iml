@@ -27,6 +27,31 @@
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.9" level="project" />
     <orderEntry type="library" name="Maven: dom4j:dom4j:1.6.1" level="project" />
     <orderEntry type="library" name="Maven: xml-apis:xml-apis:1.0.b2" level="project" />
+    <orderEntry type="library" name="Maven: jaxen:jaxen:1.1.6" level="project" />
     <orderEntry type="library" name="Maven: commons-io:commons-io:2.5" level="project" />
+    <orderEntry type="library" name="Maven: com.ibm.watson.developer_cloud:java-sdk:3.5.3" level="project" />
+    <orderEntry type="library" name="Maven: com.ibm.watson.developer_cloud:alchemy:3.5.3" level="project" />
+    <orderEntry type="library" name="Maven: com.ibm.watson.developer_cloud:core:3.5.3" level="project" />
+    <orderEntry type="library" name="Maven: com.squareup.okhttp3:okhttp:3.3.1" level="project" />
+    <orderEntry type="library" name="Maven: com.squareup.okio:okio:1.8.0" level="project" />
+    <orderEntry type="library" name="Maven: com.squareup.okhttp3:logging-interceptor:3.3.1" level="project" />
+    <orderEntry type="library" name="Maven: com.squareup.okhttp3:okhttp-urlconnection:3.3.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.6.2" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.jersey.bundles.repackaged:jersey-jsr166e:2.22.2" level="project" />
+    <orderEntry type="library" name="Maven: com.ibm.watson.developer_cloud:conversation:3.5.3" level="project" />
+    <orderEntry type="library" name="Maven: com.ibm.watson.developer_cloud:dialog:3.5.3" level="project" />
+    <orderEntry type="library" name="Maven: com.ibm.watson.developer_cloud:discovery:3.5.3" level="project" />
+    <orderEntry type="library" name="Maven: com.ibm.watson.developer_cloud:document-conversion:3.5.3" level="project" />
+    <orderEntry type="library" name="Maven: com.ibm.watson.developer_cloud:language-translation:3.5.3" level="project" />
+    <orderEntry type="library" name="Maven: com.ibm.watson.developer_cloud:language-translator:3.5.3" level="project" />
+    <orderEntry type="library" name="Maven: com.ibm.watson.developer_cloud:natural-language-classifier:3.5.3" level="project" />
+    <orderEntry type="library" name="Maven: com.ibm.watson.developer_cloud:personality-insights:3.5.3" level="project" />
+    <orderEntry type="library" name="Maven: com.ibm.watson.developer_cloud:retrieve-and-rank:3.5.3" level="project" />
+    <orderEntry type="library" name="Maven: com.ibm.watson.developer_cloud:speech-to-text:3.5.3" level="project" />
+    <orderEntry type="library" name="Maven: com.squareup.okhttp3:okhttp-ws:3.3.1" level="project" />
+    <orderEntry type="library" name="Maven: com.ibm.watson.developer_cloud:text-to-speech:3.5.3" level="project" />
+    <orderEntry type="library" name="Maven: com.ibm.watson.developer_cloud:tone-analyzer:3.5.3" level="project" />
+    <orderEntry type="library" name="Maven: com.ibm.watson.developer_cloud:tradeoff-analytics:3.5.3" level="project" />
+    <orderEntry type="library" name="Maven: com.ibm.watson.developer_cloud:visual-recognition:3.5.3" level="project" />
   </component>
 </module>

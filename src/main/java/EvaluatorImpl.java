@@ -1,7 +1,5 @@
 import components.NER;
-import components.alchemy.AlchemyNERD;
 import components.dbpedia.DBpediaNER;
-import components.stanford.StanfordNER;
 import entities.Slide;
 import utils.ResourceHelper;
 
@@ -25,8 +23,8 @@ public class EvaluatorImpl implements Evaluator {
     private HashMap<String, NER> initNER() {
         return new HashMap<String, NER>() {{
             put("dbpedia", new DBpediaNER());
-            put("alchemy", new AlchemyNERD());
-            put("stanford", new StanfordNER());
+            // put("alchemy", new AlchemyNERD());
+            //put("stanford", new StanfordNER());
         }};
     }
 
@@ -39,6 +37,7 @@ public class EvaluatorImpl implements Evaluator {
             List<String> slideFileContents = ResourceHelper.getResourceFiles(resPath);
             List<String> slideExpectedAnswers = null;
             for (String slide: slideFileContents) {
+                System.out.println(slide);
                 slides.add(new Slide(slide, null));
             }
         } catch (IOException e) {
@@ -48,10 +47,19 @@ public class EvaluatorImpl implements Evaluator {
         for (Slide slide : slides) {
             // TODO: get expected entities from somewhere
             for (NER nerTool: this.nerTools.values()) {
+                System.out.println("START NER: ");
                 List<String> entities = nerTool.getEntities(slide.getContent());
+                for (String entity: entities) {
+                    System.out.println(entity);
+                }
                 // slide.compute(entities);
                 // System.out.println(slide.getMetrics().toString());
             }
         }
+    }
+
+    public static void main(String[] args) {
+        Evaluator evaluator = new EvaluatorImpl();
+        evaluator.evaluate();
     }
 }
