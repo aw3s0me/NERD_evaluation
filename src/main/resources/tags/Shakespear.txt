@@ -1,0 +1,6 @@
+http://dbpedia.org/resource/William_Shakespear
+http://dbpedia.org/ontology/Play
+http://dbpedia.org/resource/Romance
+http://dbpedia.org/resource/Theater
+http://dbpedia.org/resource/Tragedy
+http://dbpedia.org/resource/Comedy

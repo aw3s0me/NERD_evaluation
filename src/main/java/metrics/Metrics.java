@@ -4,14 +4,27 @@ package metrics;
  * Created by akorovin on 20.02.2017.
  */
 public class Metrics {
-    private Double precision = 0.0;
-    private Double recall = 0.0;
-    private Double fMeasure = 0.0;
+    private final static Double DEFAULT = 0.0;
+    private Double precision;
+    private Double recall;
+    private Double fMeasure;
 
     public Metrics(Double precision, Double recall, Double fMeasure) {
         this.precision = precision;
         this.recall = recall;
         this.fMeasure = fMeasure;
+    }
+
+    public Metrics() {
+        this.precision = DEFAULT;
+        this.recall = DEFAULT;
+        this.fMeasure = DEFAULT;
+    }
+
+    public void reset() {
+        this.precision = DEFAULT;
+        this.recall = DEFAULT;
+        this.fMeasure = DEFAULT;
     }
 
     public Double getPrecision() {

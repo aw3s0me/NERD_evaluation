@@ -4,7 +4,6 @@ import entities.Slide;
 import utils.ResourceHelper;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +12,8 @@ import java.util.Map;
  * Created by akorovin on 21.02.2017.
  */
 public class EvaluatorImpl implements Evaluator {
-    private final static String resPath = "slides/";
+    private final static String slidePath = "slides/";
+    private final static String tagPath = "tags/";
     private Map<String, NER> nerTools = new HashMap<>();
 
     public EvaluatorImpl() {
@@ -31,30 +31,25 @@ public class EvaluatorImpl implements Evaluator {
     @Override
     public void evaluate() {
         // TODO: get all slide strings
-        List<Slide> slides = new ArrayList<>();
+        Map<String, Slide> slideFileContents;
         try {
             // TODO: reimplement it to use map
-            List<String> slideFileContents = ResourceHelper.getResourceFiles(resPath);
-            List<String> slideExpectedAnswers = null;
-            for (String slide: slideFileContents) {
-                System.out.println(slide);
-                slides.add(new Slide(slide, null));
+            slideFileContents = ResourceHelper.getResourceFiles(slidePath, tagPath);
+            for (Map.Entry<String, Slide> slide: slideFileContents.entrySet()) {
+                Slide curSlide = slide.getValue();
+                System.out.println(slide.getKey());
+                for (NER nerTool: this.nerTools.values()) {
+                    System.out.println("START NER: ");
+                    List<String> entities = nerTool.getEntities(curSlide.getContent());
+                    for (String entity: entities) {
+                        System.out.println(entity);
+                    }
+                    curSlide.compute(entities);
+                    System.out.println(curSlide.getMetrics().toString());
+                }
             }
         } catch (IOException e) {
-            System.out.println("Could not load slides at path: " + resPath);
-        }
-
-        for (Slide slide : slides) {
-            // TODO: get expected entities from somewhere
-            for (NER nerTool: this.nerTools.values()) {
-                System.out.println("START NER: ");
-                List<String> entities = nerTool.getEntities(slide.getContent());
-                for (String entity: entities) {
-                    System.out.println(entity);
-                }
-                // slide.compute(entities);
-                // System.out.println(slide.getMetrics().toString());
-            }
+            System.out.println("Could not load slides at path: " + slidePath);
         }
     }
 

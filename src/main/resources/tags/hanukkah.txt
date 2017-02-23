@@ -1,0 +1,7 @@
+http://dbpedia.org/resource/Hanukkah
+http://dbpedia.org/resource/Festival
+http://dbpedia.org/resource/Jews
+http://dbpedia.org/resource/Light
+http://dbpedia.org/resource/God
+http://dbpedia.org/resource/Candle
+http://dbpedia.org/resource/History

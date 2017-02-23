@@ -1,0 +1,4 @@
+http://dbpedia.org/resource/Vikings
+http://dbpedia.org/resource/Europe
+http://dbpedia.org/resource/Thor
+http://dbpedia.org/resource/England

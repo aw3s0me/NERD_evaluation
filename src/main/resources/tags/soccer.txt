@@ -1,0 +1,7 @@
+http://dbpedia.org/resource/Child
+http://dbpedia.org/resource/Ability
+http://dbpedia.org/resource/Success
+http://dbpedia.org/resource/Learning
+http://dbpedia.org/resource/Soccer
+http://dbpedia.org/resource/Psychology
+http://dbpedia.org/resource/Competition

@@ -1,0 +1,5 @@
+http://dbpedia.org/resource/Atmosphere
+http://dbpedia.org/resource/Greenhouse_effect
+http://dbpedia.org/resource/Earth
+http://dbpedia.org/resource/Carbon
+http://dbpedia.org/resource/Dioxide
